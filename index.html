@@ -4,134 +4,190 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>BookVerse</title>
-  <link href="https://fonts.googleapis.com/css2?family=Cardo&family=Crimson+Text&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cardo&family=Playfair+Display&display=swap" rel="stylesheet">
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
-      padding: 0;
-      background-color: #fdf7ec;
-      color: #4c3b2a;
-      font-family: 'Crimson Text', serif;
+      background-color: #fdf8ee;
+      font-family: 'Cardo', serif;
+      color: #3b2f2f;
     }
 
     header {
-      background-color: #f2e4c7;
-      padding: 60px 20px 30px;
+      background-image: url('https://www.transparenttextures.com/patterns/old-wall.png');
+      background-color: #3e2f20;
+      color: #f3e9d2;
       text-align: center;
-      border-bottom: 2px solid #c9b697;
+      padding: 80px 20px;
+      border-bottom: 6px double #d2b48c;
     }
 
     header h1 {
-      font-family: 'Cardo', serif;
-      font-size: 3.5rem;
+      font-family: 'Playfair Display', serif;
+      font-size: 3.8rem;
       margin: 0;
-      color: #5a3e2b;
+      letter-spacing: 1px;
     }
 
     header p {
       font-style: italic;
-      font-size: 1.2rem;
-      color: #7d684e;
+      margin-top: 10px;
+      font-size: 1.3rem;
+      color: #d6c6a7;
     }
 
-    main {
-      max-width: 960px;
-      margin: 40px auto;
-      padding: 0 20px;
+    nav {
+      background-color: #261b10;
+      text-align: center;
+      padding: 12px 0;
+      border-bottom: 2px solid #c3a97c;
     }
 
-    section {
-      margin-bottom: 40px;
+    nav a {
+      color: #f2e8d5;
+      text-decoration: none;
+      margin: 0 18px;
+      font-weight: bold;
+      font-size: 1rem;
+      letter-spacing: 0.5px;
+      font-family: 'Playfair Display', serif;
     }
 
-    h2 {
-      font-size: 1.8rem;
-      margin-bottom: 10px;
-      color: #3e2b1f;
-      font-family: 'Cardo', serif;
+    nav a:hover {
+      text-decoration: underline;
     }
 
-    ul {
-      list-style-type: '📖 ';
-      padding-left: 20px;
+    .hero {
+      background: url('https://images.unsplash.com/photo-1601421235772-680df4c0fa5b') center/cover no-repeat;
+      color: #fff;
+      text-shadow: 1px 1px 3px #000;
+      padding: 100px 20px;
+      text-align: center;
     }
 
-    ul li {
-      margin-bottom: 10px;
-      font-size: 1.1rem;
-      line-height: 1.5;
+    .hero h2 {
+      font-size: 2.8rem;
+      margin-bottom: 20px;
     }
 
-    .btn {
+    .hero a {
       display: inline-block;
       margin-top: 20px;
-      padding: 12px 24px;
-      background-color: #8a6e46;
+      padding: 14px 30px;
+      background-color: #af7e4d;
       color: #fff;
-      text-decoration: none;
       font-weight: bold;
+      text-decoration: none;
+      font-size: 1.1rem;
       border-radius: 6px;
       transition: background-color 0.3s ease;
     }
 
-    .btn:hover {
-      background-color: #6d5435;
+    .hero a:hover {
+      background-color: #8c623a;
+    }
+
+    .features {
+      max-width: 1000px;
+      margin: 60px auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      justify-content: center;
+      padding: 0 20px;
+    }
+
+    .feature-card {
+      background-color: #fff9ed;
+      border: 1px solid #d5c4a1;
+      border-radius: 12px;
+      padding: 30px;
+      flex: 1 1 280px;
+      box-shadow: 2px 2px 10px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .feature-card h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+      color: #5a3d28;
+    }
+
+    .feature-card p {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #473c30;
     }
 
     footer {
-      background-color: #f2e4c7;
+      background-color: #2a1e12;
+      color: #d6c8a3;
       text-align: center;
-      padding: 20px;
+      padding: 30px 10px;
       font-size: 0.9rem;
-      color: #6b5136;
-      border-top: 1px solid #d5c1a2;
+      border-top: 3px double #b19c7f;
+      margin-top: 60px;
     }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>📚 BookVerse</h1>
-    <p>A timeless portal to AI-powered book adventures</p>
+    <h1>BookVerse</h1>
+    <p>Bound by stories, powered by AI, wrapped in vintage wonder</p>
   </header>
 
-  <main>
-    <section>
-      <h2>🌟 Discover BookVerse Features</h2>
-      <ul>
-        <li>🔮 AI Generated Worlds</li>
-        <li>🗣️ AI Book Debates</li>
-        <li>📖 Social Reading Rooms with AI Moderators</li>
-        <li>🎨 AI-Generated Book Cover Customization</li>
-        <li>📚 Vintage Book Collectors Shelf</li>
-        <li>📦 AI Book Lounge: Your Personal Library Keeper</li>
-        <li>🧭 AI Curated Reading Paths</li>
-        <li>🕯️ Virtual Book Clubs</li>
-        <li>🖼️ Personal Library Book Covers (AI-Generated)</li>
-        <li>💖 Favourite Moments Collection (AI-Powered)</li>
-        <li>🏛️ AI-enhanced Virtual Bookstore Entrance</li>
-        <li>📓 Antique Journal for Notes & Annotations</li>
-        <li>🗨️ Whispering Corners: Themed Discussion Rooms</li>
-        <li>💌 Literary Letters: Postcards & Notes</li>
-        <li>📅 Virtual Bookstore Events & Author Meetups</li>
-        <li>☕ Poets Cafe: Where Words Brew</li>
-        <li>🏅 Antique Badge Collection</li>
-        <li>🪪 Bookish Identity Cards</li>
-        <li>📝 Handwritten Quotes Wall</li>
-        <li>📤 Shelf Sharing</li>
-        <li>🎩 Vintage Meet & Greet Lounge</li>
-        <li>🗺️ Reading Journey Maps</li>
-        <li>🧩 Reading Quests</li>
-        <li>🕯️ Streaks & Candles Tracker</li>
-        <li>🌳 Bookmate Tree (Your Reader Network)</li>
-        <li>📚 Weekly Bookfairs</li>
-      </ul>
-      <a href="#" class="btn">✨ Enter Your BookVerse</a>
-    </section>
-  </main>
+  <nav>
+    <a href="#">Worlds</a>
+    <a href="#">Library</a>
+    <a href="#">Journal</a>
+    <a href="#">Events</a>
+    <a href="#">Café</a>
+  </nav>
+
+  <section class="hero">
+    <h2>Step into Your Story Sanctuary</h2>
+    <a href="#">Enter BookVerse</a>
+  </section>
+
+  <section class="features">
+    <div class="feature-card">
+      <h3>AI-Generated Worlds</h3>
+      <p>Explore imaginative realms & participate in book debates crafted by AI's creative intelligence.</p>
+    </div>
+    <div class="feature-card">
+      <h3>Custom Vintage Library</h3>
+      <p>Design your own shelf, personalize book covers, and collect rare literary gems in style.</p>
+    </div>
+    <div class="feature-card">
+      <h3>Social Reading Rooms</h3>
+      <p>Cozy, AI-moderated discussions, themed book circles, and quiet corners for reflection.</p>
+    </div>
+    <div class="feature-card">
+      <h3>Antique Journal & Letters</h3>
+      <p>Write, annotate & send literary letters — digitally vintage and delightfully poetic.</p>
+    </div>
+    <div class="feature-card">
+      <h3>Virtual Bookstore Entrance</h3>
+      <p>Step through a golden-etched doorway into an AI-enhanced bookstore like no other.</p>
+    </div>
+    <div class="feature-card">
+      <h3>Poets Café & Bookmate Tree</h3>
+      <p>Meet readers, collect antique badges, and light candles in memory of your favorite reads.</p>
+    </div>
+  </section>
 
   <footer>
-    © 2025 BookVerse by Yatri. Bound by stories, powered by AI, wrapped in vintage love.
+    © 2025 BookVerse by Yatri · Designed with nostalgia · Fueled by stories · Built by AI
   </footer>
 
 </body>
