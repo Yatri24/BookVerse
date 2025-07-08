@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>BookVerse</title>
-  <link href="https://fonts.googleapis.com/css2?family=Cardo&family=Playfair+Display&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&family=Cardo&display=swap" rel="stylesheet">
   <style>
     * {
       box-sizing: border-box;
@@ -12,103 +12,99 @@
 
     body {
       margin: 0;
-      background-color: #fdf8ee;
       font-family: 'Cardo', serif;
-      color: #3b2f2f;
+      background: radial-gradient(ellipse at center, #1c1b18 0%, #0f0e0c 100%);
+      color: #f5f0d5;
+      overflow-x: hidden;
     }
 
     header {
-      background-image: url('https://www.transparenttextures.com/patterns/old-wall.png');
-      background-color: #3e2f20;
-      color: #f3e9d2;
       text-align: center;
-      padding: 80px 20px;
-      border-bottom: 6px double #d2b48c;
+      padding: 100px 20px 40px;
+      background: url('https://www.transparenttextures.com/patterns/dark-mosaic.png');
+      background-color: #120f0a;
+      border-bottom: 5px double #8c6e45;
+      animation: fadeIn 1.5s ease-out;
     }
 
     header h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 3.8rem;
+      font-family: 'UnifrakturCook', cursive;
+      font-size: 4rem;
       margin: 0;
-      letter-spacing: 1px;
+      color: #e8d2a6;
+      text-shadow: 2px 2px 4px #000;
     }
 
     header p {
-      font-style: italic;
       margin-top: 10px;
-      font-size: 1.3rem;
-      color: #d6c6a7;
+      font-size: 1.2rem;
+      color: #b8a472;
+      font-style: italic;
     }
 
     nav {
-      background-color: #261b10;
-      text-align: center;
-      padding: 12px 0;
-      border-bottom: 2px solid #c3a97c;
+      display: flex;
+      justify-content: center;
+      background-color: #1b1712;
+      padding: 15px 0;
+      border-bottom: 2px solid #62482b;
     }
 
     nav a {
-      color: #f2e8d5;
+      color: #e7d3a1;
       text-decoration: none;
-      margin: 0 18px;
+      margin: 0 20px;
       font-weight: bold;
       font-size: 1rem;
-      letter-spacing: 0.5px;
-      font-family: 'Playfair Display', serif;
+      transition: color 0.3s;
     }
 
     nav a:hover {
-      text-decoration: underline;
+      color: #e0b86f;
     }
 
     .hero {
-      background: url('https://images.unsplash.com/photo-1601421235772-680df4c0fa5b') center/cover no-repeat;
-      color: #fff;
-      text-shadow: 1px 1px 3px #000;
-      padding: 100px 20px;
       text-align: center;
+      padding: 120px 20px;
+      background: linear-gradient(to bottom, #181511, #0e0c0a);
+      animation: fadeInUp 1.2s ease-out;
     }
 
     .hero h2 {
       font-size: 2.8rem;
       margin-bottom: 20px;
+      color: #ffecc0;
     }
 
     .hero a {
-      display: inline-block;
-      margin-top: 20px;
       padding: 14px 30px;
-      background-color: #af7e4d;
+      background-color: #b28451;
       color: #fff;
-      font-weight: bold;
       text-decoration: none;
       font-size: 1.1rem;
-      border-radius: 6px;
-      transition: background-color 0.3s ease;
+      border-radius: 8px;
+      transition: background-color 0.3s;
     }
 
     .hero a:hover {
-      background-color: #8c623a;
+      background-color: #8f6532;
     }
 
     .features {
-      max-width: 1000px;
-      margin: 60px auto;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 40px;
-      justify-content: center;
-      padding: 0 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      padding: 60px 20px;
+      background-color: #14120f;
     }
 
     .feature-card {
-      background-color: #fff9ed;
-      border: 1px solid #d5c4a1;
-      border-radius: 12px;
+      background: linear-gradient(to bottom, #2b251d, #191611);
       padding: 30px;
-      flex: 1 1 280px;
-      box-shadow: 2px 2px 10px rgba(0,0,0,0.05);
-      transition: transform 0.3s ease;
+      border: 1px solid #4d3925;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+      transition: transform 0.3s;
     }
 
     .feature-card:hover {
@@ -116,79 +112,85 @@
     }
 
     .feature-card h3 {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.5rem;
+      color: #f4d9a5;
+      font-size: 1.4rem;
       margin-bottom: 10px;
-      color: #5a3d28;
     }
 
     .feature-card p {
+      color: #d9c7a1;
       font-size: 1rem;
-      line-height: 1.6;
-      color: #473c30;
+      line-height: 1.5;
     }
 
     footer {
-      background-color: #2a1e12;
-      color: #d6c8a3;
+      background-color: #100e0b;
+      color: #8d7b59;
       text-align: center;
-      padding: 30px 10px;
+      padding: 30px 20px;
       font-size: 0.9rem;
-      border-top: 3px double #b19c7f;
-      margin-top: 60px;
+      border-top: 1px solid #5a4b32;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
 <body>
-
   <header>
     <h1>BookVerse</h1>
-    <p>Bound by stories, powered by AI, wrapped in vintage wonder</p>
+    <p>Royal Realms. Literary Magic. AI-Powered Wonder.</p>
   </header>
 
   <nav>
-    <a href="#">Worlds</a>
     <a href="#">Library</a>
+    <a href="#">Worlds</a>
     <a href="#">Journal</a>
-    <a href="#">Events</a>
     <a href="#">Café</a>
+    <a href="#">Events</a>
   </nav>
 
   <section class="hero">
-    <h2>Step into Your Story Sanctuary</h2>
+    <h2>Step Through the Dusty Doors of the Past into the Future of Reading</h2>
     <a href="#">Enter BookVerse</a>
   </section>
 
   <section class="features">
     <div class="feature-card">
-      <h3>AI-Generated Worlds</h3>
-      <p>Explore imaginative realms & participate in book debates crafted by AI's creative intelligence.</p>
+      <h3>🧠 AI-Generated Worlds</h3>
+      <p>Experience books reimagined with AI-driven immersive literary universes.</p>
     </div>
     <div class="feature-card">
-      <h3>Custom Vintage Library</h3>
-      <p>Design your own shelf, personalize book covers, and collect rare literary gems in style.</p>
+      <h3>📖 Social Reading Rooms</h3>
+      <p>Engage in candle-lit AI moderated rooms themed for every genre and mood.</p>
     </div>
     <div class="feature-card">
-      <h3>Social Reading Rooms</h3>
-      <p>Cozy, AI-moderated discussions, themed book circles, and quiet corners for reflection.</p>
+      <h3>🎨 Personalized Book Covers</h3>
+      <p>Craft beautiful, vintage-style AI book covers for your personal collection.</p>
     </div>
     <div class="feature-card">
-      <h3>Antique Journal & Letters</h3>
-      <p>Write, annotate & send literary letters — digitally vintage and delightfully poetic.</p>
+      <h3>📜 Antique Journal</h3>
+      <p>Write your thoughts, quotes, and ideas with our old parchment styled journal.</p>
     </div>
     <div class="feature-card">
-      <h3>Virtual Bookstore Entrance</h3>
-      <p>Step through a golden-etched doorway into an AI-enhanced bookstore like no other.</p>
+      <h3>💌 Literary Letters</h3>
+      <p>Send poetic postcards and thoughtful notes to readers around the world.</p>
     </div>
     <div class="feature-card">
-      <h3>Poets Café & Bookmate Tree</h3>
-      <p>Meet readers, collect antique badges, and light candles in memory of your favorite reads.</p>
+      <h3>☕ Poets Café</h3>
+      <p>Hang out with fellow romantics in a space for free verse and late-night prose.</p>
     </div>
   </section>
 
   <footer>
-    © 2025 BookVerse by Yatri · Designed with nostalgia · Fueled by stories · Built by AI
+    © 2025 BookVerse · A Kingdom of Pages · A Realm of AI · Crafted by Yatri
   </footer>
-
 </body>
 </html>
